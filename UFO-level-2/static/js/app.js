@@ -69,14 +69,8 @@ var form = d3.selectAll("#datetime");
         console.log(filteredData);
 
         ufo_table(filteredData);
-
-   // We can use d3 to see the object that dispatched the event
-   // console.log(d3.event.target);
  };
 
 // // We can use the `on` function in d3 to attach an event to the handler function
 button.on("click", runUFO);
 form.on("submit", runUFO)
-
-// function to filter data - need table as a function - clear table of all other info when filtering - create another table
-

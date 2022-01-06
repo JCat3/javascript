@@ -28,17 +28,18 @@
         <p>The Truth is Out There</p>
     </div>
     <div class= "container">
-        <div class="col-md-2">
+        <div class="row margin-top-50">
+          <div class="col-md-2">
             <aside class="filters">
                 <div class="panel panel-default">
-                  <div class="panel-heading">Filter Search</div>
+                  <div class="panel-heading" style= "background-color: white;">Filter Search</div>
                   <div class="panel-body">
                     <form>
                       <div class="form-group">
                         <ul class="list-group" id="filters">
                           <li class="filter list-group-item">
                             <label for="date">Enter a Date</label>
-                            <input class="form-control" id="datetime" type="text" placeholder="1/11/2011">
+                            <input class="form-control" id="datetime" type="text" placeholder="1/11/2011" style= "background-color: white>
                           </li>
                         </ul>
                       </div>
@@ -47,10 +48,10 @@
                   </div>
                 </div>
             </aside>
-        </div>
-        <div class="col-md-10">
+          </div>
+          <div class="col-md-10">
             <div id="table-area" class="">
-              <table id="ufo-table" class="table table-striped">
+              <table id="ufo-table" class="table table-striped" style="background-color: rgb(217, 218, 219);">
                 <thead>
                   <tr>
                     <th class="table-head">Date</th>
@@ -67,15 +68,19 @@
             </div>
           </div>
         </div>
+        
 
         <footer class="footer">
-            <span class="bottom" style="color:white">UFO Sightings</span>
+          <span class="bottom" style="color:white">UFO Sightings</span>
         </footer>
+    </div>
+
+    
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="static/js/data.js"></script>
     <script src="static/js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
-<script src="static/js/index.js"></script>
+<script src="static/js/app.js"></script>
 
 </html>
