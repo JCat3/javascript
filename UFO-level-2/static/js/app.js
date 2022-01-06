@@ -22,7 +22,7 @@ function ufo_table (data) {
     table.attr("class", "table table-striped");
 
     var tbody = d3.select("tbody");
-    tbody.html("");
+
 
     // loop through UFO Data
     data.forEach(function(data) {
@@ -47,17 +47,36 @@ ufo_table(tableData);
 var button = d3.selectAll("#filter-btn");
 
 // Getting a reference to the input element on the page with the id property set to 'input-field'
-var inputField = d3.selectAll("#datetime");
+var form = d3.selectAll("#datetime");
 
 // This function is triggered when the button is clicked
-    function handleClick() {
-        console.log("A button was clicked!");
+    function runUFO() {
+        
+    // Prevent the page from refreshing
+        d3.event.preventDefault();
+
+        tbody.html("");
+        
+        var inputElement = d3.select("#datetime");
+
+        var inputValue = inputElement.property("value");
+
+        console.log(inputElement);
+        console.log(inputValue);
+
+        var filteredData = tableData.filter( tableData => tableData.datetime === inputValue);
+
+        console.log(filteredData);
+
+        ufo_table(filteredData);
 
    // We can use d3 to see the object that dispatched the event
-   console.log(d3.event.target);
- }
+   // console.log(d3.event.target);
+ };
 
 // // We can use the `on` function in d3 to attach an event to the handler function
-button.on("click", handleClick);
+button.on("click", runUFO);
+form.on("submit", runUFO)
+
 // function to filter data - need table as a function - clear table of all other info when filtering - create another table
 
